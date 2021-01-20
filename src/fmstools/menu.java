@@ -1,8 +1,10 @@
 
+
 package fmstools;
 
 //import fmstools.printIt;
 import java.util.Scanner;
+
 
 public class menu {
 
@@ -16,7 +18,8 @@ public class menu {
     public menu() {
         Scanner input = new Scanner(System.in);
 
-        int choice;
+        
+        int choice=0;
         do {
             System.out.println("============== Menu ============== \n");
             System.out.print("==    1.) List all Files          == \n");
@@ -28,21 +31,39 @@ public class menu {
             System.out.print("==    7.) Exit program            == \n");
             System.out.print("==    Enter Your Menu Choice:     == \n");
             System.out.println("============== Menu ============== \n");
+            
+            
+            String userinput = input.next();
+            
 
-            choice = input.nextInt();
+            try {
+                
+                choice = Integer.parseInt(userinput);
+                
+            } catch (NumberFormatException e) {
+                System.err.println("Sorry mate that was not an option in the menu");
+            }
+                
+             
+          
+
+
 
             switch (choice) {
 
                 case 1:
-                    printIt.o("Listing all files mofo");
+                   // printAfterMenu("Listing all files mofo");
+                   new listallfiles();
+                   
+
                     break;
 
                 case 2:
-                    printIt.o("Listing all Image files yess");
+                    printAfterMenu("Listing all Image files yess");
                     break;
 
                 case 3:
-                    printIt.o("Listing all PNG files nice");
+                    printAfterMenu("Listing all PNG files nice");
                     break;
 
                 case 4:
@@ -61,12 +82,22 @@ public class menu {
                     System.exit(0);
                     break;
                 default:
+                try{
+                    
+                }catch(NumberFormatException ex){
                     System.out.println(choice + " is not a valid Menu Option! Please Select Another.");
+                }
 
             }
-        } while (choice != 7 /* Exit loop when choice is 6 */);
-
+        } while (choice != 7 );
+  
     }
+
+    public  static void printAfterMenu(Object s){   
+            printIt.o(s);
+        
+    };
+
 
     public static void main(String[] args) {
 
@@ -74,5 +105,4 @@ public class menu {
     }
 
 }
-//git config --global --edit
-//git commit --amend --reset-author
+
