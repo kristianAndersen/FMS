@@ -74,3 +74,5 @@ public class menu {
     }
 
 }
+//git config --global --edit
+//git commit --amend --reset-author
