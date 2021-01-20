@@ -23,7 +23,7 @@ The goal of this project is to learn **how to read and write local files, extrac
     - Get the name of the chosen file
     - How big is the file
     - If it is a text file how many lines of text 
-    - If it is a text search for a specific word 
+    - If it is a text file search for a specific word 
       and how many times that specific word is found in the file
 - Logging
     - log all results and function call duration from the file manipulating functionality to a log file and displing log in the console
