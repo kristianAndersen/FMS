@@ -1,12 +1,14 @@
-import fmstools.*;
+
+import menu.basemenu;
 
 public class program {
 
     public static void main(String[] args) {
-    
-      new menu();
-      
-      
+
+      basemenu menu=new basemenu();
+     
+       menu.basicMenu();
+
     }
 }
 
